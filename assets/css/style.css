@@ -5,7 +5,16 @@
     margin: 0;
 }
 
-body {background: whitesmoke;}
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,300,700,600);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700,300);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,500,600,700,300);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,300);
+@import 'https://fonts.googleapis.com/css?family=Hind+Madurai';
+
+.containerMain {max-width: 640px; margin: 0 auto;}
+.margin60 {margin: 60px 0;}
+
+.main-header {background: #fff;}
 
 .main-header .about-row {
     background: #fff;
@@ -13,32 +22,37 @@ body {background: whitesmoke;}
 }
 
 .main-header .container .content {
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
+    width: 70%;
+    height: auto;
+    text-align: left;
+    display: inline-block;
 }
 
-.main-header .container .content .do {
+.main-header .container .name {
     font-family: "Open Sans", Times, serif;
-    font-weight: 600;
-    text-align: center;
-    margin: 20px 0px;
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.main-header .container .do {
+    font-family: "Open Sans", Times, serif;
+    line-height: 1.4;
+    color: rgba(0,0,0,.6);
 }
 
 .main-header .container .content .location {
-    text-align: center;
     margin: 20px 0px;
 }
 
-.main-header .container .content .img-container {
-    width: 200px;
-    margin: 0 auto;
+.main-header .container .img-container {
+    width: 100px;
     height: auto;
+    float: right;
 }
 
 .main-header .me-image {
-    width: 200px;
-    margin: 20px 0 0 0;
+    width: 100px;
     border-radius: 50%;
 }
 
@@ -51,6 +65,44 @@ body {background: whitesmoke;}
     justify-content: center;
 }
 
+/* Projects */
+
+.projectBody {
+    position: relative;
+    background-image: url("../images/proj1.png");
+    background-position: center;
+    background-size: cover;
+    padding: 80px 0px;
+}
+
+.projectBody2 {
+    position: relative;
+    background-image: url("https://cdn-images-1.medium.com/max/1400/gradv/29/81/30/darken/25/1*pZGK3uR7vJwdzSUdlrTwIA.jpeg");
+    background-position: center;
+    background-size: cover;
+    padding: 80px 0px;
+}
+
+.projectBody .projectTitle, .projectBody2 .projectTitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    color: #fff;
+    text-align: right;
+}
+
+.projectBody .projectSubtitle, .projectBody2 .projectSubtitle {
+    font-family: 'Open Sans', sans-serif;
+    text-align: right;
+    font-size: 17px;
+    color: #fff;
+}
+
+.projectBody2 .projectTitle, .projectBody2 .projectSubtitle {
+    text-align: left; !important
+}
+
 /* BUTTONs */
 
 .btn-default{
@@ -58,7 +110,7 @@ body {background: whitesmoke;}
     text-transform: uppercase;
     font-weight: 700;
     background: transparent;
-    color: #fff;
+    color: #00AEFF;
     position: relative;
     border-radius: 50px;
 }
@@ -82,4 +134,26 @@ body {background: whitesmoke;}
     background: #169FCC;
     outline: 0;
     color: #fff ;
+}
+
+/*Overlay
+============================================*/
+
+
+.bg-overlay.pattern {
+    background: url("../images/pattern.png") repeat scroll 0% 0% transparent;
+}
+.bg-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width : 320px) and (max-width : 767px)  {
+    .main-header .container .content {
+        width: 60%;
+    }
 }
