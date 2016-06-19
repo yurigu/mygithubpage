@@ -65,6 +65,13 @@
     justify-content: center;
 }
 
+.main-header .content .list-networks li a i {
+    color: #000;
+}
+
+.main-header .content .list-networks li a:hover i {
+    color: #00AEFF;
+}
 /* Projects */
 
 .projectBody {
